@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!--navbar-->
+  <nav class="nav flex row">
+    <div class="logo">
+      <h1>LOGO</h1>
+    </div>
+    <p>Services</p>
+    <p>Projects</p>
+    <p>About</p>
+    <button><a href=""><p>Get in Touch</p></a></button>
+  </nav>
+
+  <div class="bar"></div>
+
+  <!--3d canvas-->
+  <div class="canvas-cont">
+    <canvas id="canvas3d"></canvas>
+  </div>
+  
+  <!--hero section-->
+  <div id="hero" class="flex row">
+    <h1>CRAFTING<br>BEAUTIFUL<br>EXPERIENCES</h1>
+    <button><a href=""><p>Get in Touch</p></a></button>
+  </div>
+
+  <!--second section-->
+  <div id="part1" class="flex row">
+    <div class="part1-info flex col">
+      <h2>Services</h2>
+      <h5>Web app Development</h5>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit pariatur at sunt exercitationem? Ad error molestiae, eaque alias nam, nemo ipsum quibusdam pariatur, voluptates corporis esse consequuntur explicabo eligendi eos?</p>
+      <h5>UI & UX Design</h5>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum doloribus iure beatae perspiciatis odio quaerat commodi voluptatum, unde odit repudiandae minima exercitationem temporibus quis esse mollitia ad et, harum vitae.</p>
+      <h5>Branding</h5>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, suscipit quas! Voluptates, dolorum. Voluptatibus, quidem. Cumque, quas. Aperiam, quas!</p>
+    </div>
+  </div>
+
+  <div id="part2" class="flex row">
+    <div class="part2-info flex col">
+      <h2>Features</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit pariatur at sunt exercitationem? Ad error molestiae, eaque alias nam, nemo ipsum quibusdam pariatur, voluptates corporis esse consequuntur explicabo eligendi eos?</p>
+    </div>
+  </div>
+
+  <div id="part3" class="flex row">
+    <div class="part3-info flex col">
+      <h3>Contact</h3>
+      <p>Got a question or want to work together? Use the form below to contact us.</p>
+      <form class="contact-form" action="" method="post" target="_self" id="googleForm">
+        <div class="input-area">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="entry.xxxxxxxxx" required><br><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="entry.xxxxxxxxx" required><br><br>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="entry.xxxxxxxxx" required></textarea><br><br>
+          
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+  <script src="main.js" type="module"></script>
+  <script type="module">
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('googleForm');
+        form.action = import.meta.env.GOOGLE_FORM_ACTION_URL;
+    });
+  </script>
+</body>
+</html>
+
+<!--
+  todo
+    remove full 3D scene from bg
+    add
+    add
+    add
+    try
+    tablet device 3D scene
+    hq image as "3D" bg
+    top navbar
+    horizontal scrolling for web app
+-->
