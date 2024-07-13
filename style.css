@@ -60,6 +60,71 @@ nav {
   grid-template-rows: auto;
 }
 
+.header{
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: min-content auto max-content;
+  grid-template-areas: logo links nav-button;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.logo{
+  align-self: center;
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: none;
+  margin: none;
+  color: #fff;
+}
+
+.links li{
+  margin: 0 15px;
+}
+
+.links a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-button{
+  justify-content: center;
+  margin: 0 10px 0 0;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 12px;
+  background-color: #e69d6f;
+  align-items: flex-end;
+}
+
+.nav-button a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+  padding: 0 6px;
+}
+
+.logo h1{
+  position: relative;
+  font-size: 20px;
+  padding: 10px;
+  margin: 4px;
+  top: auto;
+}
+
+nav p{
+  padding: 10px;
+  margin: 4px;
+}
+
 .bar {
   height: 100%;
   width: 0%;
@@ -77,9 +142,24 @@ p {
   color: #fff;
 }
 
-h1 {
-  font-size: 6vw;
-  position: absolute;
+
+h2{
+  font-size: 40px;
+  line-height: 1;
+  color: #fff;
+}
+
+#hero{
+  height: 150vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 80px;
+  padding: 20px 80px;
+}
+
+#hero h1 {
+  font-size: 5vw;
   top: calc(100vh - 40vw);
   font-weight: 800;
   left: 20px;
@@ -88,41 +168,7 @@ h1 {
   color: #fff;
   z-index: 5;
   grid-column-start: auto;
-}
-
-h2{
-  font-size: 40px;
-  line-height: 1;
-  color: #fff;
-}
-
-nav h1{
-  position: relative;
-  font-size: 20px;
-  padding: 10px;
-  margin: 4px;
-  top: auto;
-}
-
-nav p{
-  padding: 10px;
-  margin: 4px;
-}
-
-nav button{
-  border-radius: 12px;
-  background-color: #e69d6f;
-  align-items: flex-end;
-}
-
-nav button a{
-  text-decoration: none;
-  color: #fff
-}
-
-#hero{
-  height: 150vh;
-  width: 100%;
+  padding: 0 20px
 }
 
 #hero button{
@@ -131,17 +177,22 @@ nav button a{
   border-radius: 12px;
   border: none;
   padding: 10px;
+  margin: 20px;
   background-color: #4670fb;
 }
 
-#hero button p{
+#hero p{
   font-size: 20px;
   font-weight: bold;
+  margin: 20px;
 }
 
 #hero button a{
   text-decoration: none;
   color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
 }
 
 #part1{
