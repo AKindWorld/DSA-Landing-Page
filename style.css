@@ -58,6 +58,7 @@ nav {
   display: grid;
   justify-content: normal;
   grid-template-rows: auto;
+  border: 2px solid #828282;
 }
 
 .header{
@@ -118,6 +119,7 @@ nav {
   padding: 10px;
   margin: 4px;
   top: auto;
+  color: #fff;
 }
 
 nav p{
@@ -131,7 +133,8 @@ nav p{
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #4670fb;
+  /* background-color: #4670fb; */
+  background-color: #000C1F;
   z-index: -5;
 }
 
@@ -158,8 +161,20 @@ h2{
   padding: 20px 80px;
 }
 
+.hero-logo{
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: linear-gradient(225deg, #FF7575 0%, #31C1FF 100%);
+  z-index: 5;
+  margin: 20px;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  top: 15vh;
+}
+
 #hero h1 {
-  font-size: 5vw;
+  font-size: 4vw;
   top: calc(100vh - 40vw);
   font-weight: 800;
   left: 20px;
@@ -172,19 +187,31 @@ h2{
 }
 
 #hero button{
-  height: 80px;
+  height: 70px;
   width: 180px;
   border-radius: 12px;
-  border: none;
   padding: 10px;
   margin: 20px;
   background-color: #4670fb;
+  border: none;
+}
+
+#hero button:hover{
+  background-color: #4670fbb2;
 }
 
 #hero p{
   font-size: 20px;
   font-weight: bold;
   margin: 20px;
+}
+
+.hero-copyright span{
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 20px;
+  margin-top: 40px;
 }
 
 #hero button a{
@@ -245,4 +272,53 @@ h2{
   border-radius: 6px;
   outline: none;
   resize: none;
+}
+
+.gradient-border{
+  --border-width: 6px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  background: #222;
+  border-radius: var(--border-width);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    /*background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );*/
+    background: linear-gradient(60deg, hsl(0, 85%, 30%), hsl(10, 85%, 30%), hsl(220, 85%, 30%), hsl(230, 85%, 30%));
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+}
+
+.gradient-border:hover {
+  box-shadow: 0 0 60px rgba(24, 124, 255, 0.64);
+}
+
+@keyframes moveGradient {
+50% {
+  background-position: 100% 50%;
+}
 }
